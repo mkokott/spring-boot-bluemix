@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.mkko.trainings;
+package org.mkko.trainings.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
