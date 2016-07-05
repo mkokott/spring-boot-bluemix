@@ -42,8 +42,8 @@ public class CloudantClientMgr {
 			@Value("${app.cloudant.database:sample_nosql_db}") String database){
 		
 		this.url = url;
-		this.user = user;
-		this.password = password;
+		this.user = user.length() > 0 ? user : null;
+		this.password = password.length() > 0 ? password : null;
 		this.databaseName = database;
 		
 		if (isRunningInCloudFoundry())
