@@ -18,6 +18,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-spring-service-connector</artifactId>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -25,25 +30,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>net.bluemix</groupId>
-			<artifactId>bluemix-cloud-connectors-cloudfoundry</artifactId>
-			<version>0.0.1.RC6</version>
-		</dependency>
-		<dependency>
-			<groupId>net.bluemix</groupId>
-			<artifactId>bluemix-cloud-connectors-local</artifactId>
-			<version>0.0.1.RC6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-spring-service-connector</artifactId>
-		</dependency>
-		<!-- If you intend to deploy the app on Cloud Foundry, add the following -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-cloudfoundry-connector</artifactId>
 		</dependency>
 	</dependencies>
 
