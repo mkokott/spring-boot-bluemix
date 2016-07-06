@@ -24,9 +24,6 @@ public class DemoApp {
 	public static void main(String[] args) {
 
 		SpringApplication.run(DemoApp.class, args);
-
-		Database cloudantDb = CloudantClientMgr.getDataBase();
-		System.out.println(cloudantDb.info());
 	}
 
 	@Bean
