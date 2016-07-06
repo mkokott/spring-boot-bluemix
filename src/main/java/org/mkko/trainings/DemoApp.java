@@ -6,6 +6,7 @@ package org.mkko.trainings;
 import org.mkko.trainings.cloudant.CloudantClientMgr;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import com.cloudant.client.api.Database;
 
@@ -16,15 +17,21 @@ import com.cloudant.client.api.Database;
  */
 @SpringBootApplication
 public class DemoApp {
-
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 
 		SpringApplication.run(DemoApp.class, args);
-		
-		Database cloudantClient = CloudantClientMgr.getDataBase();
-		System.out.println(cloudantClient.info());
+
+		Database cloudantDb = CloudantClientMgr.getDataBase();
+		System.out.println(cloudantDb.info());
+	}
+
+	@Bean
+	public Database cloudantDatabase(){
+
+		return CloudantClientMgr.getDataBase();
 	}
 }
